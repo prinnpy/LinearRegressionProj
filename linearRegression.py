@@ -13,8 +13,6 @@ customers = pd.read_csv('Ecommerce Customers')
 sns.set_palette("GnBu_d")
 sns.set_style('whitegrid')
 
-sns.jointplot(x='Time on Website', y='Yearly Amount Spent', data=customers)
-
-print(customers)
+sns.jointplot(x='Time on Website', y='Yearly Amount Spent',kind='hex', data=customers)
 
 plt.show()
