@@ -8,6 +8,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 
-df = pd.read_csv('Ecommerce Customers')
+customers = pd.read_csv('Ecommerce Customers')
 
-print(df)
+sns.set_palette("GnBu_d")
+sns.set_style('whitegrid')
+
+sns.jointplot(x='Time on Website', y='Yearly Amount Spent', data=customers)
+
+print(customers)
+
+plt.show()
